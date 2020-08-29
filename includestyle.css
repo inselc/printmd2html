@@ -1,0 +1,141 @@
+/* -- Page setup for screen and print -------------------------------------- */
+@media screen {
+    html {
+        background-color: #e0e0e0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #fff;
+        font-family: sans-serif;
+        width: 21cm; /* DIN A4 */
+        margin: auto;
+        padding: 1cm;
+        box-sizing: border-box;
+    }
+}
+
+@media print {
+    html {
+        padding: 0;
+    }
+    
+    body {
+        font-family: sans-serif;
+        width: 21cm; /* DIN A4 */
+        padding: 1cm;
+        box-sizing: border-box;
+    }
+}
+
+/* -- Links ---------------------------------------------------------------- */
+a, a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+/* -- Images --------------------------------------------------------------- */
+img {
+    max-width: 90%;
+}
+.centerimg { /* Container */
+    width: 100%;
+    text-align: center;
+}
+.centerimg > p { /* Image caption */
+    margin-top: 0;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+}
+
+#logo { /* Special formatting for the logo in the top right */
+    float: right;
+    padding: 1em;
+}
+
+/* -- Captions ------------------------------------------------------------- */
+h1 { /* # Text */ 
+    padding-top: 0.7em;
+    margin-top: 0;
+    color: #000000;
+}
+
+h2 { /* ## Text */
+    color: #0070da;
+}
+
+
+/* -- "Normal" Text -------------------------------------------------------- */
+p {
+    clear: both;    
+    text-align: justify;
+    line-height: 1.3em;
+}
+
+li {
+    line-height: 1.3em;
+}
+
+/* -- Footnote references -------------------------------------------------- */
+p > sup {
+    font-size: 0.65em;
+    line-height: 1.3em;
+    vertical-align: top;
+}
+.footnote-ref::before {
+    content: "[";
+}
+.footnote-ref {
+    text-decoration: underline;
+}
+.footnote-ref::after {
+    content: "]";
+}
+
+/* -- Code display --------------------------------------------------------- */
+pre { /* Code block */
+    background-color: #f3f3f3;
+    padding: 0.3em 0.3em 0.3em 0.75em;
+    width: 100%;
+    border-left: 0.3em solid #c0c0c0;
+    box-sizing: border-box;
+}
+pre > code {
+    padding: 0;
+}
+@media screen{ /* Show scrollbar for screen */
+    pre {
+        overflow-x: auto;
+    }
+}
+@media print { /* Use line break for print */
+    pre {
+        overflow: hidden;
+        white-space: pre-wrap;
+    }
+    pre > code {
+        word-wrap: normal;
+    }
+}
+
+code { /* Inline code */
+    font-family: monospace;
+    background-color: #f3f3f3;
+    border-radius: 0.25em;
+    padding: 0.1em 0.3em 0.1em 0.3em;
+    vertical-align: baseline;
+}
+
+/* -- Tables --------------------------------------------------------------- */
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+th, td {
+    padding: 0.3em;
+    border: 1px solid #e0e0e0;
+}
+th {
+    background-color: #e0e0e0;
+}
